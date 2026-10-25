@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow | Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="app-layout">
+
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-icon">✓</div>
+                <span>Task<span class="brand-highlight">Flow</span></span>
+            </div>
+
+            <p class="brand-description">Small tasks. Big progress.</p>
+
+            <div class="sidebar-label">WORKSPACE</div>
+
+            <div class="nav-item active">
+                <span>▦</span> My Tasks
+            </div>
+
+            <div class="sidebar-bottom">
+                <div class="mini-illustration">✦</div>
+                <h3>Keep going!</h3>
+                <p>Every small step takes you closer to your goals.</p>
+            </div>
+
+            <div class="sidebar-footer">YOUR PERSONAL WORKSPACE</div>
+        </aside>
+
+        <main class="main-content">
+
+            <header class="topbar">
+                <div>
+                    <p class="eyebrow">YOUR PRODUCTIVITY SPACE</p>
+                    <h1>My Task Manager <span>✦</span></h1>
+                    <p class="subtitle">
+                        Plan your day. Focus on what matters.
+                    </p>
+                </div>
+
+                <div class="date-card">
+                    <span>📅</span>
+                    <div>
+                        <small>TODAY</small>
+                        <p>Let's get things done</p>
+                    </div>
+                </div>
+            </header>
+
+            <section class="welcome-banner">
+                <div>
+                    <span class="banner-label">YOUR DAILY GOALS</span>
+                    <h2>Make today count.</h2>
+                    <p>One task at a time. You've got this!</p>
+                </div>
+                <div class="banner-art">🚀</div>
+            </section>
+
+            <section class="overview-grid">
+                <article class="overview-card total-card">
+                    <div class="overview-icon">▤</div>
+                    <p>Total tasks</p>
+                    <h2 id="taskCount">0</h2>
+                    <small>Your task list at a glance</small>
+                </article>
+
+                <article class="overview-card focus-card">
+                    <div class="overview-icon">◎</div>
+                    <p>Daily focus</p>
+                    <h2>Stay focused</h2>
+                    <small>Small steps lead to big wins</small>
+                </article>
+
+                <article class="overview-card goal-card">
+                    <div class="overview-icon">✧</div>
+                    <p>Your reminder</p>
+                    <h2>Keep going</h2>
+                    <small>Progress over perfection</small>
+                </article>
+            </section>
+
+            <section class="tasks-panel" id="tasks">
+
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">STAY ORGANIZED</p>
+                        <h2>My Tasks</h2>
+                    </div>
+                    <span class="live-badge">
+                        <span class="status-dot"></span> LIVE LIST
+                    </span>
+                </div>
+
+                <div class="task-input">
+                    <div class="input-wrapper">
+                        <span>✎</span>
+                        <input
+                            type="text"
+                            id="taskInput"
+                            placeholder="What would you like to accomplish?"
+                            aria-label="Enter a new task"
+                        >
+                    </div>
+
+                    <button id="addButton">
+                        <span>＋</span> Add Task
+                    </button>
+                </div>
+
+                <div class="list-heading">
+                    <h3>Your task list</h3>
+                    <span>Manage your progress below</span>
+                </div>
+
+                <p id="message">
+                    No tasks yet. Add your first task!
+                </p>
+
+                <ul id="taskList"></ul>
+
+                <footer class="tasks-footer">
+                    <span>✦</span>
+                    <p>You've got this. Keep making progress!</p>
+                </footer>
+
+            </section>
+
+            <footer class="page-footer">
+                Built with HTML, CSS & JavaScript DOM
+                <span>Made for productivity ✦</span>
+            </footer>
+
+        </main>
+    </div>
+
+</body>
+</html>
