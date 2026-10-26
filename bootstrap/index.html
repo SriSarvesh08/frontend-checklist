@@ -1,0 +1,331 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover modern gadgets at NovaStore.">
+    <title>NovaStore | Bootstrap Edition</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <style>
+        :root {
+            --brand: #6750e8;
+            --dark: #17172b;
+            --soft: #f6f5ff;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: var(--dark);
+            background: #fff;
+        }
+
+        .navbar-brand {
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .brand-dot {
+            color: var(--brand);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #f4f1ff, #eef4ff);
+            border-radius: 28px;
+            overflow: hidden;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            font-weight: 800;
+            letter-spacing: -3px;
+            line-height: 1.08;
+        }
+
+        .text-brand {
+            color: var(--brand);
+        }
+
+        .btn-brand {
+            color: white;
+            background: var(--brand);
+            border: 1px solid var(--brand);
+        }
+
+        .btn-brand:hover {
+            color: white;
+            background: #5039cc;
+        }
+
+        .hero-art {
+            min-height: 300px;
+            display: grid;
+            place-items: center;
+            font-size: clamp(6rem, 15vw, 10rem);
+            background: radial-gradient(circle, #ddd6ff, transparent 70%);
+        }
+
+        .product-card {
+            height: 100%;
+            border: 1px solid #eceaf5;
+            border-radius: 20px;
+            transition: transform .2s, box-shadow .2s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 16px 35px #28204d12;
+        }
+
+        .product-art {
+            min-height: 185px;
+            display: grid;
+            place-items: center;
+            font-size: 5rem;
+            background: var(--soft);
+            border-radius: 16px;
+        }
+
+        .price {
+            color: var(--brand);
+            font-size: 1.15rem;
+            font-weight: 800;
+        }
+
+        .section-label {
+            color: var(--brand);
+            font-size: .75rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .newsletter {
+            background: var(--dark);
+            color: white;
+            border-radius: 24px;
+        }
+
+        footer a {
+            color: #77758c;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: var(--brand);
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 {
+                letter-spacing: -1.5px;
+            }
+
+            .hero-art {
+                min-height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-white py-3">
+    <div class="container">
+        <a class="navbar-brand fs-4" href="#">nova<span class="brand-dot">.</span></a>
+
+        <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse" data-bs-target="#mainNav"
+            aria-controls="mainNav" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#products">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-brand rounded-pill px-4 mt-2 mt-lg-0"
+                       href="#products">Explore Store</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main>
+    <section class="container py-4 py-lg-5" id="home">
+        <div class="hero row align-items-center g-0 p-4 p-lg-5">
+            <div class="col-lg-6 py-3 py-lg-4">
+                <span class="badge rounded-pill text-bg-light border mb-4">
+                    ✦ TECH THAT MOVES YOU
+                </span>
+
+                <h1>Upgrade your<br>everyday <span class="text-brand">life.</span></h1>
+
+                <p class="text-secondary mt-4 mb-4">
+                    Discover thoughtfully selected gadgets designed
+                    to make your everyday moments better.
+                </p>
+
+                <div class="d-flex flex-wrap gap-3">
+                    <a href="#products" class="btn btn-brand btn-lg rounded-pill px-4">
+                        Shop Collection →
+                    </a>
+                    <a href="#about" class="btn btn-outline-dark btn-lg rounded-pill px-4">
+                        Discover More
+                    </a>
+                </div>
+
+                <div class="d-flex gap-4 mt-5">
+                    <div>
+                        <strong class="fs-4">50+</strong>
+                        <div class="small text-secondary">Products</div>
+                    </div>
+                    <div>
+                        <strong class="fs-4">4.9/5</strong>
+                        <div class="small text-secondary">Demo rating</div>
+                    </div>
+                    <div>
+                        <strong class="fs-4">24/7</strong>
+                        <div class="small text-secondary">Support</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 hero-art" aria-label="Headphones illustration">
+                🎧
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-5" id="products">
+        <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4">
+            <div>
+                <p class="section-label mb-2">CURATED FOR YOU</p>
+                <h2 class="fw-bold mb-0">Featured products</h2>
+                <p class="text-secondary mt-2 mb-0">
+                    Everyday essentials. Thoughtfully picked.
+                </p>
+            </div>
+            <span class="text-brand fw-semibold">Explore all →</span>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-sm-6 col-lg-4">
+                <article class="product-card p-3">
+                    <div class="product-art">🎧</div>
+                    <div class="d-flex justify-content-between mt-3">
+                        <span class="badge text-bg-light">Audio</span>
+                        <span class="small text-secondary">★ 4.8</span>
+                    </div>
+                    <h3 class="h5 fw-bold mt-3">Studio Headphones</h3>
+                    <p class="text-secondary small">
+                        Immersive sound for work and play.
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="price">₹2,499</span>
+                        <button class="btn btn-outline-dark rounded-pill btn-sm"
+                            type="button" data-product="Studio Headphones">
+                            Add to bag
+                        </button>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4">
+                <article class="product-card p-3">
+                    <div class="product-art">⌚</div>
+                    <div class="d-flex justify-content-between mt-3">
+                        <span class="badge text-bg-light">Wearables</span>
+                        <span class="small text-secondary">★ 4.9</span>
+                    </div>
+                    <h3 class="h5 fw-bold mt-3">Smart Watch</h3>
+                    <p class="text-secondary small">
+                        Stay connected, wherever life takes you.
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="price">₹3,999</span>
+                        <button class="btn btn-outline-dark rounded-pill btn-sm"
+                            type="button" data-product="Smart Watch">
+                            Add to bag
+                        </button>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4">
+                <article class="product-card p-3">
+                    <div class="product-art">🔊</div>
+                    <div class="d-flex justify-content-between mt-3">
+                        <span class="badge text-bg-light">Accessories</span>
+                        <span class="small text-secondary">★ 4.7</span>
+                    </div>
+                    <h3 class="h5 fw-bold mt-3">Portable Speaker</h3>
+                    <p class="text-secondary small">
+                        Take your favourite sound everywhere.
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="price">₹1,799</span>
+                        <button class="btn btn-outline-dark rounded-pill btn-sm"
+                            type="button" data-product="Portable Speaker">
+                            Add to bag
+                        </button>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <p id="cartMessage" class="text-brand mt-4 mb-0" role="status"
+            aria-live="polite"></p>
+    </section>
+
+    <section class="container py-4" id="about">
+        <div class="newsletter p-4 p-lg-5 text-center">
+            <p class="section-label">THE NOVA DIFFERENCE</p>
+            <h2 class="fw-bold">Good design. Great everyday tech.</h2>
+            <p class="text-white-50 mx-auto mt-3" style="max-width: 550px;">
+                A student-built storefront concept focused on clean design,
+                accessible navigation and responsive layouts.
+            </p>
+            <a href="#products" class="btn btn-light rounded-pill px-4 mt-2">
+                Find your favourite
+            </a>
+        </div>
+    </section>
+</main>
+
+<footer class="container py-4 mt-3">
+    <div class="d-flex flex-wrap justify-content-between gap-3">
+        <span class="fw-bold">nova<span class="text-brand">.</span></span>
+        <span class="small text-secondary">
+            © 2026 NovaStore. Demo project — not a real store.
+        </span>
+        <a href="#home">Back to top ↑</a>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    const cartMessage = document.getElementById("cartMessage");
+
+    document.querySelectorAll("[data-product]").forEach((button) => {
+        button.addEventListener("click", () => {
+            const product = button.dataset.product;
+            cartMessage.textContent =
+                `${product} added to your demo bag!`;
+        });
+    });
+</script>
+</body>
+</html>
