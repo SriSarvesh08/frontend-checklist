@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevFinder | GitHub Profile Search</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <main class="container">
+        <header class="header">
+            <div class="logo">⌘</div>
+            <div>
+                <h1>DevFinder</h1>
+                <p>Discover developers on GitHub</p>
+            </div>
+        </header>
+
+        <section class="hero">
+            <p class="eyebrow">DEVELOPER EXPLORER</p>
+            <h2>Find your next inspiration.</h2>
+            <p>Search a GitHub username to explore their profile.</p>
+
+            <form id="searchForm" class="search-form">
+                <input
+                    type="text"
+                    id="usernameInput"
+                    placeholder="Enter GitHub username..."
+                    aria-label="GitHub username"
+                    required
+                >
+                <button type="submit" id="searchButton">Search Profile →</button>
+            </form>
+        </section>
+
+        <p id="statusMessage" role="status" aria-live="polite">
+            Try searching for "octocat" to get started.
+        </p>
+
+        <section id="profileSection" class="profile-card" hidden>
+            <div class="profile-header">
+                <img id="avatar" src="" alt="GitHub profile avatar">
+
+                <div class="profile-info">
+                    <h2 id="name"></h2>
+                    <a id="username" href="#" target="_blank"
+                       rel="noopener noreferrer"></a>
+                    <p id="bio"></p>
+                    <p id="location"></p>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <article class="stat-card">
+                    <span>Repositories</span>
+                    <strong id="repositories">0</strong>
+                </article>
+
+                <article class="stat-card">
+                    <span>Followers</span>
+                    <strong id="followers">0</strong>
+                </article>
+
+                <article class="stat-card">
+                    <span>Following</span>
+                    <strong id="following">0</strong>
+                </article>
+            </div>
+
+            <a id="profileLink" class="profile-link"
+               href="#" target="_blank" rel="noopener noreferrer">
+                View GitHub Profile ↗
+            </a>
+        </section>
+
+        <footer>
+            Built with HTML, CSS & JavaScript · Powered by GitHub API
+        </footer>
+    </main>
+
+</body>
+</html>
