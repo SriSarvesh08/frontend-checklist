@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover modern gadgets at NovaStore.">
+    <title>NovaStore | Tailwind Edition</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+        @theme {
+            --color-brand: #6750e8;
+            --color-ink: #17172b;
+            --color-soft: #f6f5ff;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen bg-white font-sans text-ink">
+
+    <header class="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 lg:px-8">
+        <a href="#home" class="text-3xl font-extrabold tracking-tight">
+            nova<span class="text-brand">.</span>
+        </a>
+
+        <button id="menuButton"
+            class="rounded-xl border border-gray-200 px-4 py-2 text-sm font-semibold md:hidden"
+            aria-controls="mobileMenu" aria-expanded="false">
+            Menu ☰
+        </button>
+
+        <nav class="hidden items-center gap-8 md:flex">
+            <a href="#home" class="text-sm text-gray-600 hover:text-brand">Home</a>
+            <a href="#products" class="text-sm text-gray-600 hover:text-brand">Products</a>
+            <a href="#about" class="text-sm text-gray-600 hover:text-brand">About</a>
+            <a href="#products"
+                class="rounded-full bg-brand px-5 py-3 text-sm font-bold text-white transition hover:bg-violet-800">
+                Explore Store
+            </a>
+        </nav>
+    </header>
+
+    <nav id="mobileMenu" class="mx-5 mb-4 hidden rounded-2xl border border-gray-200 p-4 md:hidden">
+        <div class="flex flex-col gap-4">
+            <a href="#home" class="text-sm text-gray-700">Home</a>
+            <a href="#products" class="text-sm text-gray-700">Products</a>
+            <a href="#about" class="text-sm text-gray-700">About</a>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="mx-auto max-w-7xl px-5 py-4 lg:px-8 lg:py-8">
+            <div class="grid overflow-hidden rounded-[28px] bg-gradient-to-br from-violet-50 to-blue-50 lg:grid-cols-2">
+                <div class="px-6 py-10 sm:px-10 lg:px-14 lg:py-16">
+                    <span class="inline-flex rounded-full border border-violet-100 bg-white px-4 py-2 text-xs font-bold text-brand">
+                        ✦ TECH THAT MOVES YOU
+                    </span>
+
+                    <h1 class="mt-6 text-5xl leading-tight font-extrabold tracking-tight sm:text-6xl">
+                        Upgrade your everyday
+                        <span class="text-brand">life.</span>
+                    </h1>
+
+                    <p class="mt-5 max-w-lg text-sm leading-7 text-gray-600 sm:text-base">
+                        Discover thoughtfully selected gadgets designed
+                        to make your everyday moments better.
+                    </p>
+
+                    <div class="mt-7 flex flex-wrap gap-3">
+                        <a href="#products"
+                            class="rounded-full bg-brand px-6 py-4 text-sm font-bold text-white transition hover:bg-violet-800">
+                            Shop Collection →
+                        </a>
+                        <a href="#about"
+                            class="rounded-full border border-gray-300 bg-white px-6 py-4 text-sm font-bold transition hover:border-brand hover:text-brand">
+                            Discover More
+                        </a>
+                    </div>
+
+                    <div class="mt-10 flex flex-wrap gap-8">
+                        <div>
+                            <strong class="text-2xl">50+</strong>
+                            <p class="mt-1 text-xs text-gray-500">Products</p>
+                        </div>
+                        <div>
+                            <strong class="text-2xl">4.9/5</strong>
+                            <p class="mt-1 text-xs text-gray-500">Demo rating</p>
+                        </div>
+                        <div>
+                            <strong class="text-2xl">24/7</strong>
+                            <p class="mt-1 text-xs text-gray-500">Support</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid min-h-64 place-items-center bg-[radial-gradient(circle,_#ddd6ff,_transparent_70%)] text-8xl sm:text-9xl lg:min-h-full"
+                    role="img" aria-label="Headphones illustration">
+                    🎧
+                </div>
+            </div>
+        </section>
+
+        <section id="products" class="mx-auto max-w-7xl px-5 py-14 lg:px-8">
+            <div class="mb-8 flex flex-wrap items-end justify-between gap-4">
+                <div>
+                    <p class="text-xs font-extrabold tracking-[2px] text-brand">
+                        CURATED FOR YOU
+                    </p>
+                    <h2 class="mt-2 text-3xl font-extrabold tracking-tight sm:text-4xl">
+                        Featured products
+                    </h2>
+                    <p class="mt-2 text-sm text-gray-500">
+                        Everyday essentials. Thoughtfully picked.
+                    </p>
+                </div>
+                <a href="#products" class="text-sm font-bold text-brand">Explore all →</a>
+            </div>
+
+            <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                <article class="rounded-3xl border border-gray-100 p-4 transition duration-200 hover:-translate-y-1 hover:shadow-xl">
+                    <div class="grid min-h-48 place-items-center rounded-2xl bg-soft text-7xl">🎧</div>
+                    <div class="mt-4 flex items-center justify-between">
+                        <span class="rounded-full bg-gray-100 px-3 py-1 text-xs text-gray-600">Audio</span>
+                        <span class="text-xs text-gray-500">★ 4.8</span>
+                    </div>
+                    <h3 class="mt-4 text-lg font-bold">Studio Headphones</h3>
+                    <p class="mt-2 text-sm leading-6 text-gray-500">
+                        Immersive sound for work and play.
+                    </p>
+                    <div class="mt-5 flex items-center justify-between">
+                        <span class="text-lg font-extrabold text-brand">₹2,499</span>
+                        <button data-product="Studio Headphones"
+                            class="rounded-full border border-gray-300 px-4 py-2 text-xs font-bold transition hover:border-brand hover:bg-brand hover:text-white">
+                            Add to bag
+                        </button>
+                    </div>
+                </article>
+
+                <article class="rounded-3xl border border-gray-100 p-4 transition duration-200 hover:-translate-y-1 hover:shadow-xl">
+                    <div class="grid min-h-48 place-items-center rounded-2xl bg-soft text-7xl">⌚</div>
+                    <div class="mt-4 flex items-center justify-between">
+                        <span class="rounded-full bg-gray-100 px-3 py-1 text-xs text-gray-600">Wearables</span>
+                        <span class="text-xs text-gray-500">★ 4.9</span>
+                    </div>
+                    <h3 class="mt-4 text-lg font-bold">Smart Watch</h3>
+                    <p class="mt-2 text-sm leading-6 text-gray-500">
+                        Stay connected, wherever life takes you.
+                    </p>
+                    <div class="mt-5 flex items-center justify-between">
+                        <span class="text-lg font-extrabold text-brand">₹3,999</span>
+                        <button data-product="Smart Watch"
+                            class="rounded-full border border-gray-300 px-4 py-2 text-xs font-bold transition hover:border-brand hover:bg-brand hover:text-white">
+                            Add to bag
+                        </button>
+                    </div>
+                </article>
+
+                <article class="rounded-3xl border border-gray-100 p-4 transition duration-200 hover:-translate-y-1 hover:shadow-xl">
+                    <div class="grid min-h-48 place-items-center rounded-2xl bg-soft text-7xl">🔊</div>
+                    <div class="mt-4 flex items-center justify-between">
+                        <span class="rounded-full bg-gray-100 px-3 py-1 text-xs text-gray-600">Accessories</span>
+                        <span class="text-xs text-gray-500">★ 4.7</span>
+                    </div>
+                    <h3 class="mt-4 text-lg font-bold">Portable Speaker</h3>
+                    <p class="mt-2 text-sm leading-6 text-gray-500">
+                        Take your favourite sound everywhere.
+                    </p>
+                    <div class="mt-5 flex items-center justify-between">
+                        <span class="text-lg font-extrabold text-brand">₹1,799</span>
+                        <button data-product="Portable Speaker"
+                            class="rounded-full border border-gray-300 px-4 py-2 text-xs font-bold transition hover:border-brand hover:bg-brand hover:text-white">
+                            Add to bag
+                        </button>
+                    </div>
+                </article>
+            </div>
+
+            <p id="cartMessage" class="mt-5 text-sm font-semibold text-brand"
+                role="status" aria-live="polite"></p>
+        </section>
+
+        <section id="about" class="mx-auto max-w-7xl px-5 py-3 lg:px-8">
+            <div class="rounded-3xl bg-ink px-6 py-12 text-center text-white sm:px-12">
+                <p class="text-xs font-extrabold tracking-[2px] text-violet-300">
+                    THE NOVA DIFFERENCE
+                </p>
+                <h2 class="mt-3 text-3xl font-extrabold sm:text-4xl">
+                    Good design. Great everyday tech.
+                </h2>
+                <p class="mx-auto mt-4 max-w-xl text-sm leading-7 text-gray-300">
+                    A student-built storefront concept focused on clean design,
+                    accessible navigation and responsive layouts.
+                </p>
+                <a href="#products"
+                    class="mt-6 inline-block rounded-full bg-white px-6 py-3 text-sm font-bold text-ink transition hover:bg-violet-100">
+                    Find your favourite
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="mx-auto mt-8 flex max-w-7xl flex-wrap justify-between gap-3 px-5 py-7 text-xs text-gray-500 lg:px-8">
+        <a href="#home" class="text-lg font-extrabold text-ink">
+            nova<span class="text-brand">.</span>
+        </a>
+        <span>© 2026 NovaStore. Demo project — not a real store.</span>
+        <a href="#home" class="hover:text-brand">Back to top ↑</a>
+    </footer>
+
+    <script>
+        const menuButton = document.getElementById("menuButton");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const cartMessage = document.getElementById("cartMessage");
+
+        menuButton.addEventListener("click", () => {
+            const isOpening = mobileMenu.classList.contains("hidden");
+            mobileMenu.classList.toggle("hidden");
+            menuButton.setAttribute("aria-expanded", String(isOpening));
+        });
+
+        mobileMenu.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => {
+                mobileMenu.classList.add("hidden");
+                menuButton.setAttribute("aria-expanded", "false");
+            });
+        });
+
+        document.querySelectorAll("[data-product]").forEach((button) => {
+            button.addEventListener("click", () => {
+                cartMessage.textContent =
+                    `${button.dataset.product} added to your demo bag!`;
+            });
+        });
+    </script>
+</body>
+</html>
